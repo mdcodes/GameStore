@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace GameSnipeWebsite.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
-        public ActionResult Singup()
+        public ActionResult Signup()
         {
 
             return View();
