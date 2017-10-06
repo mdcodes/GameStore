@@ -1,0 +1,66 @@
+/*
+	Name: Michal Drahorat
+	Date: October 6th, 2017
+*/
+
+CREATE TABLE developer (
+	id INTEGER IDENTITY(1,1),
+	name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE category (
+	id INTEGER IDENTITY(1,1),
+	name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE platform (
+	id INTEGER IDENTITY(1,1),
+	name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE game(
+	id INTEGER IDENTITY(1,1),
+	name VARCHAR(255) UNIQUE NOT NULL,
+	price NUMERIC(5,2) NOT NULL,
+	EmployeeId INTEGER NOT NULL,
+	DeveloperId INTEGER NOT NULL,
+	CategoryId INTEGER NOT NULL,
+	FOREIGN KEY (EmployeeId) REFERENCES employee(id),
+	FOREIGN KEY (DeveloperId) REFERENCES developer(id),
+	FOREIGN KEY (CategoryId) REFERENCES category(id)
+);
+
+CREATE TABLE employee(
+	id INTEGER IDENTITY(1,1),
+	username VARCHAR(255) UNIQUE NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	name VARCHAR(20) NOT NULL,
+	surname VARCHAR(20) NOT NULL,
+	phone VARCHAR(10) NOT NULL,
+	email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE event(
+	id INTEGER IDENTITY(1,1),
+	name VARCHAR(255) NOT NULL,
+	date date NOT NULL,
+	time time(7),
+	location VARCHAR(255) NOT NULL
+	price DECIMAL(4,2),
+	EmployeeId INTEGER NOT NULL,
+	FOREIGN KEY (EmployeeId) REFERENCES employee(id)
+);
+
+CREATE TABLE reviews(
+	id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT UNIQUE,
+	approved TINYINT(1),
+	rating INTEGER(1) NOT NULL,
+	reviewText VARCHAR(255),
+	GameId INTEGER NOT NULL,
+	MemberId INTEGER NOT NULL,
+	FOREIGN KEY (GameId) REFERENCES game(id)
+	FOREIGN KEY (MemberId) REFERENCES member(id)
+);
+
+
+
