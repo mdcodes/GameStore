@@ -15,14 +15,14 @@ namespace GameSnipeWebsite.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Welcome to Game Snipe! Here you will find the best deals and games in the market.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "We are Anonymoose. We live in forests and get scared easily. More than likely expect us while driving.";
 
             return View();
         }
