@@ -56,3 +56,32 @@ G:\Classes\YEAR_3\PROG3050_Programming_Microsoft_Enterprise_Applications\GitCopy
 G:\Classes\YEAR_3\PROG3050_Programming_Microsoft_Enterprise_Applications\GitCopy\PROG3050_MSEnterprise\Phase 2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.csproj.CoreCompileInputs.cache
 G:\Classes\YEAR_3\PROG3050_Programming_Microsoft_Enterprise_Applications\GitCopy\PROG3050_MSEnterprise\Phase 2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.dll
 G:\Classes\YEAR_3\PROG3050_Programming_Microsoft_Enterprise_Applications\GitCopy\PROG3050_MSEnterprise\Phase 2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.pdb
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\GameSnipeWebsite.dll.config
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\GameSnipeWebsite.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\GameSnipeWebsite.pdb
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Antlr3.Runtime.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Microsoft.ApplicationInsights.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Microsoft.Web.Infrastructure.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Newtonsoft.Json.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Helpers.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Mvc.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Optimization.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Razor.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.WebPages.Deployment.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.WebPages.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.WebPages.Razor.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\WebGrease.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Helpers.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Mvc.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Optimization.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.Razor.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.WebPages.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.WebPages.Deployment.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\System.Web.WebPages.Razor.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Antlr3.Runtime.pdb
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Newtonsoft.Json.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\bin\Microsoft.ApplicationInsights.xml
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.csprojResolveAssemblyReference.cache
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.csproj.CoreCompileInputs.cache
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.dll
+\\FSSTU03D\Stu8\Home\Mdrahorat4563\Desktop\Enterprise\PROG3050_MSENTERPRISE\Phase2\GameSnipeWebsite\GameSnipeWebsite\obj\Debug\GameSnipeWebsite.pdb
