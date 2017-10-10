@@ -16,6 +16,20 @@ namespace GameSnipeWebsite.Models
         private string address;
         private string phoneNumber;
 
+        public Employee() { }
+
+        public Employee(int employeeId, string displayName, string firstName, string lastName, string email, string password, string address, string phoneNumber)
+        {
+            this.employeeId = employeeId;
+            this.displayName = displayName;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.password = password;
+            this.address = address;
+            this.phoneNumber = phoneNumber;
+        }
+
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string DisplayName { get => displayName; set => displayName = value; }
         public string FirstName { get => firstName; set => firstName = value; }

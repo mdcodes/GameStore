@@ -21,6 +21,25 @@ namespace GameSnipeWebsite.Models
         private int favCategory;
         private bool verified;
 
+        public Member() { }
+
+        public Member(int memberId, string userName, string firstName, string lastName, char gender, DateTime birthDate, string email, string billingAddress, string shippingAddress, string phoneNumber, int favPlatform, int favCategory, bool verified)
+        {
+            this.memberId = memberId;
+            this.userName = userName;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.gender = gender;
+            this.birthDate = birthDate;
+            this.email = email;
+            this.billingAddress = billingAddress;
+            this.shippingAddress = shippingAddress;
+            this.phoneNumber = phoneNumber;
+            this.favPlatform = favPlatform;
+            this.favCategory = favCategory;
+            this.verified = verified;
+        }
+
         public int Id { get => memberId; set => memberId = value; }
         public string UserName { get => userName; set => userName = value; }
         public string FirstName { get => firstName; set => firstName = value; }
