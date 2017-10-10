@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Game Snipe - Login";
+}
+
+<h2>Login</h2>
+
+<form asp-controller="Account" asp-action="Signin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+    <div class="form-group">
+        <label for="inputdefault">Email</label>
+        <input class="form-control input-sm" id="txtEmail" type="email">
+    </div>
+    <div class="form-group">
+        <label for="inputdefault">Password</label>
+        <input class="form-control input-sm" id="txtPassword" type="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign In</button>
+    <br />
+    <div style="padding-top:20px" >
+        <a href="@Url.Action("Signup", "Account")">
+            <i></i>
+            <span>
+                <strong>Don't have an account? Sign up!</strong>
+            </span>
+        </a>
+    </div>
+</form>
