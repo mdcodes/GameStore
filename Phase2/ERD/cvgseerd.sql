@@ -1,5 +1,4 @@
 CREATE DATABASE cvgs;
-USE cvgs; 
 
 
 CREATE TABLE Employee (id int IDENTITY NOT NULL, Username varchar(255) NOT NULL UNIQUE, Name varchar(20) NOT NULL, Surname varchar(20) NOT NULL, Phone int NOT NULL, Email varchar(255) NOT NULL, Password varchar(255) NOT NULL, PRIMARY KEY (id));
