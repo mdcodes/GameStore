@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cvgsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Games" Relationship="Self.FKGame600755" FromRole="Category" ToRole="Game" />
+    <NavigationProperty Name="Members" Relationship="Self.FKMember254575" FromRole="Category" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Developer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Games" Relationship="Self.FKGame637186" FromRole="Developer" ToRole="Game" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Phone" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Events" Relationship="Self.FKEvent12892" FromRole="Employee" ToRole="Event" />
+    <NavigationProperty Name="Games" Relationship="Self.FKGame139973" FromRole="Employee" ToRole="Game" />
+    <NavigationProperty Name="Logins" Relationship="Self.Login_Employee" FromRole="Employee" ToRole="Login" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Time" Type="DateTime" Precision="3" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Employeeid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FKEvent12892" FromRole="Event" ToRole="Employee" />
+    <NavigationProperty Name="Members" Relationship="Self.Member_Event" FromRole="Event" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="Employeeid" Type="Int32" Nullable="false" />
+    <Property Name="Developerid" Type="Int32" Nullable="false" />
+    <Property Name="Categoryid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FKGame600755" FromRole="Game" ToRole="Category" />
+    <NavigationProperty Name="Developer" Relationship="Self.FKGame637186" FromRole="Game" ToRole="Developer" />
+    <NavigationProperty Name="Employee" Relationship="Self.FKGame139973" FromRole="Game" ToRole="Employee" />
+    <NavigationProperty Name="Reviews" Relationship="Self.FKReviews453866" FromRole="Game" ToRole="Reviews" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.Login_Employee" FromRole="Login" ToRole="Employee" />
+    <NavigationProperty Name="Members" Relationship="Self.Member_Login" FromRole="Login" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MailingAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShippingAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Categoryid" Type="Int32" Nullable="false" />
+    <Property Name="Platformid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FKMember254575" FromRole="Member" ToRole="Category" />
+    <NavigationProperty Name="Platform" Relationship="Self.FKMember25122" FromRole="Member" ToRole="Platform" />
+    <NavigationProperty Name="Reviews" Relationship="Self.FKReviews911774" FromRole="Member" ToRole="Reviews" />
+    <NavigationProperty Name="Events" Relationship="Self.Member_Event" FromRole="Member" ToRole="Event" />
+    <NavigationProperty Name="Logins" Relationship="Self.Member_Login" FromRole="Member" ToRole="Login" />
+  </EntityType>
+  <EntityType Name="Platform">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Members" Relationship="Self.FKMember25122" FromRole="Platform" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Approved" Type="Byte" Nullable="false" />
+    <Property Name="Gameid" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Rating" Type="Int32" Nullable="false" />
+    <Property Name="ReviewText" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Game" Relationship="Self.FKReviews453866" FromRole="Reviews" ToRole="Game" />
+    <NavigationProperty Name="Member" Relationship="Self.FKReviews911774" FromRole="Reviews" ToRole="Member" />
+  </EntityType>
+  <Association Name="FKGame600755">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="Categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMember254575">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Member" Type="Self.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="Categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGame637186">
+    <End Role="Developer" Type="Self.Developer" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Developer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="Developerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEvent12892">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="Employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKGame139973">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Game" Type="Self.Game" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Game">
+        <PropertyRef Name="Employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReviews453866">
+    <End Role="Game" Type="Self.Game" Multiplicity="1" />
+    <End Role="Reviews" Type="Self.Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reviews">
+        <PropertyRef Name="Gameid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKMember25122">
+    <End Role="Platform" Type="Self.Platform" Multiplicity="1" />
+    <End Role="Member" Type="Self.Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Platform">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="Platformid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKReviews911774">
+    <End Role="Member" Type="Self.Member" Multiplicity="1" />
+    <End Role="Reviews" Type="Self.Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Reviews">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Login_Employee">
+    <End Role="Login" Type="Self.Login" Multiplicity="*" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+  </Association>
+  <Association Name="Member_Event">
+    <End Role="Member" Type="Self.Member" Multiplicity="*" />
+    <End Role="Event" Type="Self.Event" Multiplicity="*" />
+  </Association>
+  <Association Name="Member_Login">
+    <End Role="Login" Type="Self.Login" Multiplicity="*" />
+    <End Role="Member" Type="Self.Member" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="cvgsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Developers" EntityType="Self.Developer" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Events" EntityType="Self.Event" />
+    <EntitySet Name="Games" EntityType="Self.Game" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="Platforms" EntityType="Self.Platform" />
+    <EntitySet Name="Reviews" EntityType="Self.Review" />
+    <AssociationSet Name="FKGame600755" Association="Self.FKGame600755">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Game" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FKMember254575" Association="Self.FKMember254575">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FKGame637186" Association="Self.FKGame637186">
+      <End Role="Developer" EntitySet="Developers" />
+      <End Role="Game" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FKEvent12892" Association="Self.FKEvent12892">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FKGame139973" Association="Self.FKGame139973">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Game" EntitySet="Games" />
+    </AssociationSet>
+    <AssociationSet Name="FKReviews453866" Association="Self.FKReviews453866">
+      <End Role="Game" EntitySet="Games" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="FKMember25122" Association="Self.FKMember25122">
+      <End Role="Platform" EntitySet="Platforms" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+    <AssociationSet Name="FKReviews911774" Association="Self.FKReviews911774">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="Login_Employee" Association="Self.Login_Employee">
+      <End Role="Login" EntitySet="Logins" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="Member_Event" Association="Self.Member_Event">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="Member_Login" Association="Self.Member_Login">
+      <End Role="Login" EntitySet="Logins" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
