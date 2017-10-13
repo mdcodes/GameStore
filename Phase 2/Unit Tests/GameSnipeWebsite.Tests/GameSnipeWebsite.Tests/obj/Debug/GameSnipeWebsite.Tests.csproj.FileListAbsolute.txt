@@ -1,0 +1,8 @@
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\bin\Debug\GameSnipeWebsite.Tests.dll
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\bin\Debug\GameSnipeWebsite.Tests.pdb
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\bin\Debug\nunit.framework.dll
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\bin\Debug\nunit.framework.xml
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\obj\Debug\GameSnipeWebsite.Tests.csprojResolveAssemblyReference.cache
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\obj\Debug\GameSnipeWebsite.Tests.csproj.CoreCompileInputs.cache
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\obj\Debug\GameSnipeWebsite.Tests.dll
+G:\Test\PROG3050_MSENTERPRISE\Phase 2\Unit Tests\GameSnipeWebsite.Tests\GameSnipeWebsite.Tests\obj\Debug\GameSnipeWebsite.Tests.pdb
