@@ -1,0 +1,19 @@
+Chosen Use Cases - Iteration 2
+
+UC02: Open an account
+UC03: Log into account
+UC04: Log out of account
+UC05: Forgot password
+
+UC09: Search game catalogue
+
+UC10: Add item to wishlist
+UC11: Remove item from Wishlist
+
+UC12: Add a user to the friend/family list
+
+UC22: User registers for an event
+
+UC 26: Update mailing/shipping address
+UC27: Change wish list visibility prefs
+
