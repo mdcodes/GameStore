@@ -10,6 +10,7 @@ CREATE TABLE Login (id int IDENTITY NOT NULL, Username varchar(255) NOT NULL UNI
 CREATE TABLE Login_Employee (Loginid int NOT NULL, Employeeid int NOT NULL, PRIMARY KEY (Loginid, Employeeid));
 CREATE TABLE Member_Login (Memberid int NOT NULL, Loginid int NOT NULL, PRIMARY KEY (Memberid, Loginid));
 CREATE TABLE Member_Event (Memberid int NOT NULL, Eventid int NOT NULL, PRIMARY KEY (Memberid, Eventid));
+CREATE TABLE Credit_Card (id int NOT NULL, cardNumber int(16) NOT NULL, securityCode int(3) NOT NULL, expirationDate VARCHAR NOT NULL, MemberID int);
 ALTER TABLE Reviews ADD CONSTRAINT FKReviews453866 FOREIGN KEY (Gameid) REFERENCES Game (id);
 ALTER TABLE Event ADD CONSTRAINT FKEvent12892 FOREIGN KEY (Employeeid) REFERENCES Employee (id);
 ALTER TABLE Game ADD CONSTRAINT FKGame139973 FOREIGN KEY (Employeeid) REFERENCES Employee (id);
@@ -24,3 +25,4 @@ ALTER TABLE Member_Login ADD CONSTRAINT FKMember_Log990709 FOREIGN KEY (Memberid
 ALTER TABLE Member_Login ADD CONSTRAINT FKMember_Log655302 FOREIGN KEY (Loginid) REFERENCES Login (id);
 ALTER TABLE Member_Event ADD CONSTRAINT FKMember_Eve732832 FOREIGN KEY (Memberid) REFERENCES Member (id);
 ALTER TABLE Member_Event ADD CONSTRAINT FKMember_Eve952079 FOREIGN KEY (Eventid) REFERENCES Event (id);
+ALTER TABLE Credit_Card ADD CONSTRAINT FKMemberTable FOREIGN KEY (MemberID) REFERENCES MEMBER (id);

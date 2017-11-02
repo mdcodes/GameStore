@@ -1,0 +1,55 @@
+@startuml
+participant Employee
+participant interface
+participant gameController
+participant gameModel
+database Database
+collections gameCollection
+
+title Employee Adds Game
+
+Employee -> interface : initiateAddGame
+
+activate interface
+
+Employee <- interface : displayGameDetailsForm
+
+loop Until game details are valid
+
+Employee -> interface : enterGameDetails
+
+interface -> gameController : checkIfValid
+
+gameController -> gameController : isValid?
+
+gameController -> interface : dataInvalid
+
+interface -> Employee : displayGameDetailsForm (errorMessage)
+
+note left: Re-enter data.
+
+activate gameController
+
+deactivate interface
+
+end
+
+gameController -> gameModel : addNewGame
+deactivate gameController
+activate gameModel
+
+gameModel -> Database : addGameToDatabase
+
+deactivate gameModel
+
+activate Database
+
+Database -> gameCollection : addGameToCollection
+
+deactivate Database
+
+Database -> interface : InvalidException
+
+interface -> Employee : displayError
+
+@enduml
