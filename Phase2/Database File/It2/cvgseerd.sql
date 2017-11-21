@@ -54,9 +54,10 @@ CREATE TABLE Employee (
   id      int IDENTITY NOT NULL, 
   Name    varchar(20) NOT NULL, 
   Surname varchar(20) NOT NULL, 
-  Phone   int NOT NULL, 
+  Phone   varchar(10) NOT NULL, 
   Email   varchar(255) NOT NULL, 
   PRIMARY KEY (id));
+
 CREATE TABLE Login (
   id       int IDENTITY NOT NULL, 
   Username varchar(255) NOT NULL UNIQUE, 
