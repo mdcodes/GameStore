@@ -1,8 +1,10 @@
+CREATE DATABASE cvgs;
+
 CREATE TABLE Event (
   id         int IDENTITY NOT NULL, 
   Name       varchar(255) NOT NULL, 
-  [Date]     datetime NOT NULL, 
-  Time       datetime NULL, 
+  [Date]     varchar(255) NOT NULL, 
+  Time       varchar(255) NOT NULL, 
   Location   varchar(255) NOT NULL, 
   Price      decimal(4, 2) NULL, 
   Employeeid int NOT NULL, 
@@ -39,7 +41,7 @@ CREATE TABLE Platform (
 CREATE TABLE Member (
   id              int IDENTITY NOT NULL, 
   Gender          char(1) NOT NULL, 
-  Birthdate       datetime NOT NULL, 
+  Birthdate       varchar(255) NOT NULL, 
   Email           varchar(255) NOT NULL UNIQUE, 
   MailingAddress  varchar(255) NOT NULL, 
   ShippingAddress varchar(255) NOT NULL, 
