@@ -1,4 +1,6 @@
-CREATE DATABASE cvgs;
+CREATE DATABASE GameSnipeDB;
+
+USE GameSnipeDB;
 
 CREATE TABLE Event (
   id         int IDENTITY NOT NULL, 
