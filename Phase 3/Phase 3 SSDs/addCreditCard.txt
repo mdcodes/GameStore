@@ -1,0 +1,19 @@
+' Diagram for Adding Payment Information
+
+@startuml
+actor member
+participant interface
+participant cardController
+participant cardModel
+database GameSnipeDB
+
+member -> interface: initiateAddCreditCard
+interface -> cardController: addNewCard
+loop
+cardController -> cardController: isValidInfo
+end loop
+cardController -> cardModel: addCardToModel
+cardModel -> GameSnipeDB: addCardToDatabase
+GameSnipeDB -> GameSnipeDB: addSuccess?
+GameSnipeDB -> interface: displayError
+@enduml

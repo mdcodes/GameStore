@@ -1,0 +1,19 @@
+' Delete payment info
+
+@startuml
+
+actor member
+participant interface
+participant cardController
+participant cardModel
+database GameSnipeDB
+
+member -> interface: deleteCard
+interface -> cardController: deleteCard
+cardController -> cardController: confirmDelete?
+cardController -> interface: returnToCardList
+cardController -> cardModel: deleteCardModel
+cardModel -> GameSnipeDB: deleteCardRecord
+GameSnipeDB -> GameSnipeDB: deleteSuccess?
+GameSnipeDB -> interface: displayError
+@enduml

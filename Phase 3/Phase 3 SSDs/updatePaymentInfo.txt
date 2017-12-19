@@ -1,0 +1,19 @@
+' Update payment info
+
+@startuml
+actor member
+participant interface
+participant cardController
+participant cardModel
+database GameSnipeDB
+
+member -> interface: initiateAddCreditCard
+interface -> cardController: updateCard
+loop
+cardController -> cardController: isValidInfo
+end loop
+cardController -> cardModel: updateCardModel
+cardModel -> GameSnipeDB: updateCardRecord
+GameSnipeDB -> GameSnipeDB: updateSuccess?
+GameSnipeDB -> interface: displayError
+@enduml
